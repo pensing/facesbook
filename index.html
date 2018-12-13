@@ -12,12 +12,12 @@
 	<!-- Extra CSS -->
 	<link rel="stylesheet" href="smoelen.css" />
 	
-    <title>Smoelenboek</title>
+	<script type="text/javascript" src="smoelen.js"></script>
+	
+     <title>Smoelenboek</title>
   </head>
   
   <body>
-
-  <script src="smoelen.js"></script>
   
  <!-- Kop/header -->
  <div class="container-fluid align-middle" style="text-align:center;background-color:transparent;height:100vh;">
@@ -137,77 +137,12 @@
   <span class="text-white">Copyright 2018 P.Ensing</span>
 </div>
 
+<script src="smoelen.js"></script>
 
   <script>
   
   selectall()
   
-function selectall() {
-showmale();
-showfemale();
-}
-
-function selectfemale() {
-hidemale();
-showfemale();
-}
-
-function selectmale() {
-hidefemale();
-showmale();
-}
-
-function hidemale() {
-var x = document.getElementsByClassName("male");
-  for (i=0; i < x.length; i++) {
-      x[i].style.display = "none";
-  }
-}
-
-function hidefemale() {
-var x = document.getElementsByClassName("female");
-  for (i=0; i < x.length; i++) {
-      x[i].style.display = "none";
-  }
-}
-
-function showmale() {
-var x = document.getElementsByClassName("male");
-  for (i=0; i < x.length; i++) {
-      x[i].style.display = "block";
-  }
-}
-
-function showfemale() {
-var x = document.getElementsByClassName("female");
-  for (i=0; i < x.length; i++) {
-      x[i].style.display = "block";
-  }
-}
-
-function tel(){
-var x = document.getElementsByClassName("male").length;
-alert(x);
-}
-
-function zoekFunction() {
-    var input, filter, divs, h, i, txtValue;
-    input = document.getElementById("zoekInput");
-    filter = input.value.toUpperCase();
-    divs = document.getElementsByClassName("person");
-
-    for (i = 0; i < divs.length; i++) {
-        h = divs[i].getElementsByTagName("h3")[0];
-        txtValue = h.textContent || h.innerText;
-		txtValue = h.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            divs[i].style.display = "block";
-        } else {
-            divs[i].style.display = "none";
-        }
-    }
-
-}
   </script>
 
 
