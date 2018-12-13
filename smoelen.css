@@ -1,0 +1,40 @@
+body {  
+background-image:url('images/bg.jpg');
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+.bg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-1 {
+  background-image: url("images/jacobus.jpg");
+}
+.bg-2 {
+  /* The image used */
+  background-image: url("images/universiteit.jpg");
+}
+
+.gender{
+ }
+ 
+.female {
+display:none;
+ }
+
+.male {
+display:none;
+ }
+ 
+.pc {
+background-color:pink;
+ }
+
+.bc {
+background-color:blue;
+ }
+ 
