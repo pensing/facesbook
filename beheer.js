@@ -101,11 +101,10 @@ function clearRec(){
 
 
 function initDB(){ 
-	var table = '<table class="table table-striped table-dark" id="myTable"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th><th scope="col">Edit</th><th scope="col">Clean</th><th scope="col">Del</th></tr></thead><tbody>';
+	var table = '<table class="table table-striped table-dark" id="myTable"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th><th scope="col">Edit</th><th scope="col">Del</th></tr></thead><tbody>';
 	for (i=0;i<8;i++) {
 	row = '<tr id="regel'+i+'"><td scope="row">'+i+'</td><td>'+voornaamarr[i]+'</td><td>'+achternaamarr[i]+'</td><td>'+geslachtarr[i]+'</td>'+
 	'<td><i class="fas fa-pencil-alt" style="color:white;font-size:24px" onclick="editRec(this)"></i></td>'+
-	'<td><i class="fas fa-broom" style="color:white;font-size:24px" onclick="clearRec(this)"></i></td>'+
 	'<td><i class="fas fa-trash-alt" style="color:white;font-size:24px" onclick="deleteRec(this)"></i></td></tr>';
 	table = table + row;
 	}
@@ -115,7 +114,7 @@ function initDB(){
 
 
 function clearDB(){ 
-	var table = '<table class="table table-striped table-dark" id="myTable"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th><th scope="col"></th><th scope="col"></th><th scope="col"></th><th scope="col"></th></tr></thead><tbody>';
+	var table = '<table class="table table-striped table-dark" id="myTable"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody>';
 	table = table + '</tbody></table>';
 	document.getElementById("dbView").innerHTML = table;
 }
@@ -130,7 +129,7 @@ function saveDB(){
 }
 
 function buildView() {
-	var table = '<table class="table table-striped table-dark"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th></tr></thead></table>';
+	var table = '<table class="table table-striped table-dark"><thead><tr><th scope="col">#</th><th scope="col">Voornaam</th><th scope="col">Achternaam</th><th scope="col">Geslacht</th><th scope="col"></th><th scope="col"></th></tr></thead></table>';
 	document.getElementById("dbView").innerHTML = table;
 	
 }
