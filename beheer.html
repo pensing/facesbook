@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="smoelen.css" />
+
+	<script src="beheer.js"></script>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <title>Smoelenboek beheer</title>
+  </head>
+  <body>
+
+<div class="container pt-4 pb-2">
+  <button onclick="initDB()" type="button" class="btn btn-light">Vullen tabel</button>
+  <button onclick="clearDB()" type="button" class="btn btn-light">Legen tabel</button>
+  <button onclick="loadDB()" type="button" class="btn btn-light">Ophalen tabel</button>
+  <button onclick="saveDB()" type="button" class="btn btn-light">Opslaan tabel</button>
+</div>  
+
+<div class="container pt-2 pb-4">
+  <div style="width:400px;">
+    <div>
+      <a class="btn btn-light" data-toggle="collapse" href="#collapseVoegtoe" role="button" aria-expanded="false" aria-controls="collapseVoegtoe">
+        Toevoegen regel
+      </a>
+    </div>
+    <div class="collapse" id="collapseVoegtoe">
+      <div class="card card-body" style="width:300px;">
+  		 <label>Voornaam</label>
+  		 <input type="text" id="txtVNaam" />
+  		 <label>Achternaam</label>
+  		 <input type="text" id="txtANaam" />
+  		 <label>Geslacht</label>
+  		 <input type="text" id="txtGeslacht" />
+		 <button type="button" id="btnAdd" onclick="addRecInput();">Opslaan</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="container pt-4 pb-2">
+  <button onclick="sortDB(0)" type="button" class="btn btn-light">Sorteer tabel op index</button>
+  <button onclick="sortDB(1)" type="button" class="btn btn-light">Sorteer tabel op voornaam</button>
+  <button onclick="sortDB(2)" type="button" class="btn btn-light">Sorteer tabel op achternaam</button>
+</div>  
+  
+  <div class="container pt-5" id="dbView">
+  	 Even geduld a.u.b. de data wordt geladen.  
+  </div>
+
+  <script type="text/javascript">
+    loadDB();
+	buildView();
+  </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

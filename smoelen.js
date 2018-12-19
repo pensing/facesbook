@@ -57,13 +57,27 @@ var face = 'test';
 return face;
 }
 
-function showface2() {
-  var face = "   <div class='col-sm-6 col-lg-3'><div class= 'card shadow mb-5'>" +
-          "<img class='card-img-top' src='images/woman.png' alt='Card image cap'>" +
-          "<div class='card-body'>            <h5 class='card-title'>Eline</h5 >" +
-          "  <p class='card-text'>...</p>            <a href='#' class='btn btn-dark'>Bezoek</a>          </div>        </div>      </div>  ";
+function showface2(vnaam,anaam,geslacht) {
+  imgvar = "man";
+  colvar = "bc";
+  genvar = "male";
+  if (geslacht == "Vrouw") { imgvar = "woman"; colvar = "pc"; genvar = "female";};
+  var face = "<div class='person "+genvar+" col-sm-6 col-lg-3'><div class= 'card shadow mb-5 "+colvar+"'>" +
+          "<img class='card-img-top' src='images/"+imgvar+".png' alt='Card image cap'>" +
+          "<div class='card-body'><h3 class='card-title'>"+vnaam+" "+anaam+"</h3 >" +
+          "<p class='gender card-text'>"+geslacht+"</p></div></div></div>";
   return face;
 }
+
+
+function buildfaces() {
+  var htmlstr; htmlstr = "";
+  for (i=0;i<8;i++) {
+  	htmlstr = htmlstr + showface2(voornaamarr[i],achternaamarr[i],geslachtarr[i]);
+  }
+  document.getElementById("faces").innerHTML = htmlstr;
+}
+
 
 function showfaces() {
   var i;

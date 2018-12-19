@@ -19,8 +19,8 @@
   
   <body>
   
- <!-- Kop/header -->
- <div class="container-fluid align-middle" style="text-align:center;background-color:transparent;height:100vh;">
+<!-- Kop/header -->
+<div class="container-fluid align-middle" style="text-align:center;background-color:transparent;height:100vh;">
 
   <h4 class="display-4 text-white pt-5">Code Gorilla</h4>
   <h2 class="display-2 text-white font-weight-bold pt-4">Smoelenboek</h2>
@@ -30,7 +30,12 @@
 </div>
 
 <div class="container-fluid bg-white pt-4" style="height:100%;" id="smoeltjes">
-<h2 class="display-3 text-black font-weight-bold pt-2 pb-4">De Smoeltjes</h2>
+
+<div style="height:110px;">
+<h2 class="display-3 text-black font-weight-bold pt-2 pb-4" style="display:inline;">De Smoeltjes</h2>
+<div style="float:right;"><a href="beheer.html" style="float:right;"><i class="fas fa-database" style="font-size:48px;color:black;"></i></a></div>
+</div>
+
  <button type="button" class="btn btn-primary" style="background-color:pink;border:solid 1px pink" onclick="selectfemale()">Vrouwen</button>
  <button type="button" class="btn btn-primary" style="background-color:blue;" onclick="selectmale()">Mannen</button>
  <button type="button" class="btn btn-dark" onclick="selectall()">Iedereen</button>
@@ -40,7 +45,8 @@
     <button class="btn btn-outline-secondary" type="button" id="button-addon1">Zoek op naam</button>
   </div>
   <input id="zoekInput" onkeyup="zoekFunction()" type="text" class="form-control" placeholder="..." aria-label="Op naam zoeken" aria-describedby="button-zoek">
-</div>
+ </div>
+
  
 </div>
 
