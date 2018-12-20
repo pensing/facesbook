@@ -4,6 +4,27 @@ var voornaamarr=["Maha","Jack","Jan-Willem","Sebastiaan","Frans","Alex","Eline",
 var achternaamarr=["Almasri","Sleebos","Haeke","Prins","Heijnen","Coenen","Eijkelenkamp","Ensing"];
 var geslachtarr=["Vrouw","Man","Man","Man","Man","Man","Vrouw","Man"];
 
+var varr=[];
+var aarr=[];
+var garr=[];
+
+function stripTabel() {
+ 
+  var trs = document.getElementById("myTable").rows;
+  
+  for (i=1; i<trs.length; i++) {
+  varr.push(trs[i].cells[1].innerHTML);
+  aarr.push(trs[i].cells[2].innerHTML);
+  garr.push(trs[i].cells[3].innerHTML);
+  }
+
+}
+
+function loadArrays() {
+ varr = JSON.parse(localStorage.getItem('varray'));
+ aarr = JSON.parse(localStorage.getItem('aarray'));
+ garr = JSON.parse(localStorage.getItem('garray'));
+}
 
 function editRec(index){
 		 alert(index);
@@ -126,6 +147,11 @@ function loadDB(){
 
 function saveDB(){ 
 	localStorage.setItem('tabel', JSON.stringify(document.getElementById("dbView").innerHTML));
+	
+	stripTabel();
+	localStorage.setItem('varray', JSON.stringify(varr));
+	localStorage.setItem('aarray', JSON.stringify(aarr));
+	localStorage.setItem('garray', JSON.stringify(garr));
 }
 
 function buildView() {

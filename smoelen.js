@@ -71,9 +71,11 @@ function showface2(vnaam,anaam,geslacht) {
 
 
 function buildfaces() {
-  var htmlstr; htmlstr = "";
-  for (i=0;i<8;i++) {
-  	htmlstr = htmlstr + showface2(voornaamarr[i],achternaamarr[i],geslachtarr[i]);
+  var htmlstr = "";
+  count = varr.length;
+  for (i=0;i<count;i++) {
+  	//htmlstr = htmlstr + showface2(voornaamarr[i],achternaamarr[i],geslachtarr[i]);
+  	htmlstr = htmlstr + showface2(varr[i],aarr[i],garr[i]);
   }
   document.getElementById("faces").innerHTML = htmlstr;
 }
